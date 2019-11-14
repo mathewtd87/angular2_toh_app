@@ -1,0 +1,21 @@
+.navbar a {
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-top: 1px solid gray;
+  width: 195px;
+  height: 16px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #405061;
+  cursor: pointer;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+	background-color: white;
+	color: #405061;
+
+}

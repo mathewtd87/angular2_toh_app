@@ -1,0 +1,29 @@
+<h2>Heroes</h2>
+<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <button (click)="add(heroName.value); heroName.value=''">add</button>
+</div>
+
+<div>
+  <ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" title="delete hero" (click)="delete(hero)" routerLink="/heroes">x</button>
+  </li>
+</ul>
+</div>
+
+<!--<ul class="heroes">-->
+	<!--add the CSS via class.  then followed by the condition for the add of the class
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul> -->
+<!--bind the selectedHero object to the component when it is displayed-->
+<!--  <app-hero-detail [hero]="selectedHero"></app-hero-detail>    --> 
